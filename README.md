@@ -1,7 +1,8 @@
-# Novoga
+# Novoga  
+
 ## Instalação
 
-### Criando a VM no Proxmox 
+### Criando a VM no Proxmox  
   
 Geral: Configs padrões   
   
