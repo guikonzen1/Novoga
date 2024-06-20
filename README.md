@@ -1,7 +1,7 @@
 # Novoga
-# Instalação
+## Instalação
 
-## Criando a VM no Proxmox 
+### Criando a VM no Proxmox 
   
 Geral: Configs padrões   
   
@@ -17,7 +17,7 @@ Memória: Configs padrões
   
 Rede: Tag da VLAN -> 200, resto padrão  
   
-## Instalando o Debian na VM  
+### Instalando o Debian na VM  
 Selecionar a linguagem: ptBr (58) -> Localidade   
   
 Configuração do teclado: ptBr (11)  
@@ -39,7 +39,7 @@ Gerenciador de pacotes: Brasil (7) -> deb.debian.org -> deixar em branco a próx
   
 *Seleção de software -> deixar apenas os dois últimos marcados (11 12)(servidor SSH e utilitário de sistema padrão) -> marcar sim para a opção que irá aparecer durante essa ultima etapa e selecionar o dispositivo da instalação (/dev/sda...)   
 
-## Rodando o script
+### Rodando o script
 
 ```bash
 #!/bin/bash
