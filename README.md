@@ -1,7 +1,7 @@
 # Novoga
-## Instalação
+# Instalação
 
-###Criando a VM no Proxmox
+##Criando a VM no Proxmox
 Geral: Configs padrões 
 SO: Imagem ISO -> Debian-12.5.0, resto padrão
 Sistema: selecionar Agente Qemu, resto padrão
@@ -10,7 +10,7 @@ CPU: Configs padrões
 Memória: Configs padrões
 Rede: Tag da VLAN -> 200, resto padrão
 
-###Instalando o Debian na VM
+##Instalando o Debian na VM
 Selecionar a linguagem: ptBr (58) -> Localidade 
 Configuração do teclado: ptBr (11)
 Hostname: novo (ou qualquer outro nome)
