@@ -53,17 +53,9 @@ sudo apt install docker.io docker-compose <<EOF
 y
 EOF
 sudo systemctl enable --now docker docker.socket containerd
-#Conteiner simples
-# aplicação base
-#sudo docker run --rm -p 80:80 -e DATABASE_URL="mysql://novosga:MySQL_App_P4ssW0rd@mysqldb:3306/novosga2?charset=utf8mb4&serverVersion=5.7" novosga/novosga:2.1
-
-
-# serviço mercure para troca de mensagens
-#docker run --rm -it -p 3000:3000 -e 'SERVER_NAME=:3000' -e 'MERCURE_PUBLISHER_JWT_KEY=!ChangeMe!' -e 'MERCURE_EXTRA_DIRECTIVES=anonymous 1; cors_origins *' novosga/mercure:v0.11
-docker run --rm -d -p 3000:3000 -e 'SERVER_NAME=:3000' -e 'MERCURE_PUBLISHER_JWT_KEY=!ChangeMe!' -e 'MERCURE_EXTRA_DIRECTIVES=anonymous 1; cors_origins *' novosga/mercure:v0.11
 
 #---------------------------------------------------------------------
-#Criar um arquivo chamado docker-compose.yml e colocar esses dados: 
+#Criar um arquivo chamado docker-compose.yml e colocando os dados abaixo: 
 cat <<EOF > docker-compose.yml
 version: '2'
 
@@ -129,6 +121,14 @@ services:
 EOF
 #---------------------------------------------------------------------
 
+#Executando docker-compose:
 sudo docker-compose up -d
+
+
+#################### escrever separadamente na documentação
+sudo docker-compose exec mysqldb sh -c  'mysql -uroot -p'
+
+GRANT ALL ON novosga2.* TO 'novosga'@'%' IDENTIFIED BY 'MySQL_App_P4ssW0rd';
+quit
 ```
 
