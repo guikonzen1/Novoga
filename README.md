@@ -50,6 +50,8 @@
     - Selecionar o dispositivo da instalação (/dev/sda...)
 ### Rodando o script
 
+Após finalizar a instalação, temos que criar um arquivo e colar o código dentro do mesmo, após isso modificamos o arquivo para ser um executável e podemos rodar o arquivo, ele iniciara a instalação do docker e novosga respectivamente
+
 ```bash
 #!/bin/bash
 echo "Digite sua senha:"
