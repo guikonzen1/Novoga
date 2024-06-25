@@ -1,6 +1,11 @@
-# Novoga  
-
-## Instalação
+<title>Instalação do novoga </title>
+<style>
+    /* Estilos CSS opcionais para o número sequencial */
+    .passo {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+</style>
 
 <h2>Criando a VM no Proxmox</h2>
   
