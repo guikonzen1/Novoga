@@ -1,46 +1,53 @@
-<title>Instalação do novoga </title>
-<style>
-    /* Estilos CSS opcionais para o número sequencial */
-    .passo {
-        font-weight: bold;
-        margin-right: 10px;
-    }
-</style>
+# Instalação do novoga
 
-<h2>Criando a VM no Proxmox</h2>
-  
-<div>
-    <p><span class="passo">1.</span> <strong>Geral:</strong> Configurações padrões.</p>
-    <p><span class="passo">2.</span> <strong>SO:</strong> Selecionar imagem ISO: Debian-12.5.0. Restante das configurações padrões.</p>
-    <p><span class="passo">3.</span> <strong>Sistema:</strong> Selecionar tipo de agente: Qemu. Restante das configurações padrões.</p>
-    <p><span class="passo">4.</span> <strong>Discos:</strong> Configurações padrões. Reduzir espaço de disco para 20GB.</p>
-    <p><span class="passo">5.</span> <strong>CPU:</strong> Configurações padrões.</p>
-    <p><span class="passo">6.</span> <strong>Memória:</strong> Configurações padrões.</p>
-    <p><span class="passo">7.</span> <strong>Rede:</strong> Definir tag da VLAN como 200. Restante das configurações padrões.</p>
-</div>
-  
-### Instalando o Debian na VM  
-Selecionar a linguagem: ptBr (58) -> Localidade   
-  
-Configuração do teclado: ptBr (11)  
-  
-Hostname: novo (ou qualquer outro nome)  
-  
-Domínio: ebserhnet.ebserh.gov.br  
-  
-Senha do root:   
-Nome de um usuário (obrigatório):    
-Login do usuário:  
-Senha do usuário:  
-  
-Configuração do relógio: MT (14)   
-  
-Partição de disco: usar disco inteiro -> Selecionar o disco -> Todos os arquivos em uma partição -> Finalizar e escrever (12) -> Sim ->  não ler mídias adicionais   
-  
-Gerenciador de pacotes: Brasil (7) -> deb.debian.org -> deixar em branco a próxima opção   
-  
-*Seleção de software -> deixar apenas os dois últimos marcados (11 12)(servidor SSH e utilitário de sistema padrão) -> marcar sim para a opção que irá aparecer durante essa ultima etapa e selecionar o dispositivo da instalação (/dev/sda...)   
 
+### Criando a VM no Proxmox
+
+1. **Geral:** Configurações padrões
+2. **SO:** Selecionar imagem ISO: Debian-12.5.0. Restante das configurações padrões.
+3. **Sistema:** Deixar selecionado a seguinte checkbox: Agente Qemu. Restante das configurações padrões.
+4. **Discos:** Configurações padrões. Reduzir espaço de disco para 20GB
+5. **CPU:** Configurações padrões.
+6. **Memória:** Configurações padrões.
+7. **Rede:** Definir tag da VLAN como 200. Restante das configurações padrões.
+
+### Instalação do Debian
+
+1. **Selecionar a linguagem e localidade:** ptBr (58) e Brasil
+
+2. **Configuração do teclado:** ptBr (11)
+
+3. **Hostname:** novo (ou qualquer outro nome)
+
+4. **Domínio:** ebserhnet.ebserh.gov.br
+
+5. **Senha do root:**
+   
+6. **Nome de um usuário (obrigatório):**
+   
+7. **Login do usuário:**
+   
+8. **Senha do usuário:**
+
+9. **Configuração do relógio:** MT (14)
+
+10. **Partição de disco:** 
+    - Usar disco inteiro
+    - Selecionar o disco
+    - Todos os arquivos em uma partição
+    - Finalizar e escrever (12)
+    - Sim
+    - Não ler mídias adicionais
+
+11. **Gerenciador de pacotes:**
+    - Brasil (7)
+    - deb.debian.org
+    - Deixar em branco a próxima opção
+
+12. **Seleção de software:**
+    - Deixar apenas os dois últimos marcados (11 12) (servidor SSH e utilitário de sistema padrão)
+    - Marcar sim para a opção que irá aparecer durante essa última etapa
+    - Selecionar o dispositivo da instalação (/dev/sda...)
 ### Rodando o script
 
 ```bash
