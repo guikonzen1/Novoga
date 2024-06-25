@@ -2,21 +2,17 @@
 
 ## Instalação
 
-### Criando a VM no Proxmox  
+<h2>Criando a VM no Proxmox</h2>
   
-Geral: Configs padrões   
-  
-SO: Imagem ISO -> Debian-12.5.0, resto padrão  
-  
-Sistema: selecionar Agente Qemu, resto padrão 
-  
-Discos: Configs padrões, pode diminuir o espaço de disco (20GB)  
-  
-CPU: Configs padrões  
-  
-Memória: Configs padrões
-  
-Rede: Tag da VLAN -> 200, resto padrão  
+<div>
+    <p><span class="passo">1.</span> <strong>Geral:</strong> Configurações padrões.</p>
+    <p><span class="passo">2.</span> <strong>SO:</strong> Selecionar imagem ISO: Debian-12.5.0. Restante das configurações padrões.</p>
+    <p><span class="passo">3.</span> <strong>Sistema:</strong> Selecionar tipo de agente: Qemu. Restante das configurações padrões.</p>
+    <p><span class="passo">4.</span> <strong>Discos:</strong> Configurações padrões. Reduzir espaço de disco para 20GB.</p>
+    <p><span class="passo">5.</span> <strong>CPU:</strong> Configurações padrões.</p>
+    <p><span class="passo">6.</span> <strong>Memória:</strong> Configurações padrões.</p>
+    <p><span class="passo">7.</span> <strong>Rede:</strong> Definir tag da VLAN como 200. Restante das configurações padrões.</p>
+</div>
   
 ### Instalando o Debian na VM  
 Selecionar a linguagem: ptBr (58) -> Localidade   
