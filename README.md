@@ -29,7 +29,7 @@
    
 8. **Senha do usuário:**
 
-9. **Configuração do relógio:** MT (14)
+9. **Configuração do relógio:** Mato Grosso (14)
 
 10. **Partição de disco:** 
     - Usar disco inteiro
