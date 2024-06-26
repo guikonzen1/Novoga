@@ -36,13 +36,13 @@
     - Selecionar o disco
     - Todos os arquivos em uma partição
     - Finalizar e escrever (12)
-    - Sim
+    - Marcar SIM na opção que aparecer
     - Não ler mídias adicionais
 
 11. **Gerenciador de pacotes:**
     - Brasil (7)
     - deb.debian.org
-    - Deixar em branco a próxima opção
+    - HTTP: 
 
 12. **Seleção de software:**
     - Deixar apenas os dois últimos marcados (11 12) (servidor SSH e utilitário de sistema padrão)
