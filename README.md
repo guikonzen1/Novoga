@@ -50,7 +50,7 @@
     - Selecionar o dispositivo da instalação (/dev/sda...)
 ### Rodando o script
 
-Após finalizar a instalação, temos que criar um arquivo e colar o código dentro do mesmo, após isso modificamos o arquivo para ser um executável e podemos rodar o arquivo, ele iniciara a instalação do docker e novosga respectivamente
+Após finalizar a instalação, temos que criar um arquivo e colar o código a seguir dentro do mesmo, após isso modificamos o arquivo para ser um executável e podemos rodar, ele iniciara a instalação do docker e novosga respectivamente
 
 ```bash
 #!/bin/bash
@@ -65,7 +65,7 @@ EOF
 sudo systemctl enable --now docker docker.socket containerd
 
 #---------------------------------------------------------------------
-#Criar um arquivo chamado docker-compose.yml e colocando os dados abaixo: 
+#Cria um arquivo chamado docker-compose.yml e coloca nele os dados abaixo: 
 cat <<EOF > docker-compose.yml
 version: '2'
 
@@ -133,12 +133,19 @@ EOF
 
 #Executando docker-compose:
 sudo docker-compose up -d
+```
 
+Após isso temos que iniciar o banco do NovoSGA, isso é feito usando os seguintes comando:
 
-#################### escrever separadamente na documentação
+```bash
+#Aqui temo que informar a senha definida no arquivo anterior
 sudo docker-compose exec mysqldb sh -c  'mysql -uroot -p'
+```
+O comando acima abrirá a janela do mysql, dentro dela temos que incluir os seguintes comandos:
 
+```bash
 GRANT ALL ON novosga2.* TO 'novosga'@'%' IDENTIFIED BY 'MySQL_App_P4ssW0rd';
 quit
 ```
 
+Por fim podemo acessar o site do NovoSGA e fazer as configurações de perfis
