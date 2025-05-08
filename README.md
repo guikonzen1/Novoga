@@ -71,13 +71,12 @@ version: '2'
 
 services:
   novosga:
-    image: novosga/novosga:2.1
+    image: novosga/novosga:2.2.0
     restart: always
     depends_on:
       - mysqldb
     ports:
-      - "80:80"
-      - "2020:2020"
+      - "8080:80"
     environment:
       APP_ENV: 'prod'
       # database connection
