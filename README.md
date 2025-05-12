@@ -71,16 +71,16 @@ version: '2'
 
 services:
   novosga:
-    image: novosga/novosga:2.2.0
+    image: novosga/novosga:2.2.5
     restart: always
     depends_on:
       - mysqldb
     ports:
-      - "8080:80"
+      - "80:8080"
     environment:
       APP_ENV: 'prod'
       # database connection
-      DATABASE_URL: 'mysql://novosga:MySQL_App_P4ssW0rd@mysqldb:3306/novosga2?charset=utf8mb4&serverVersion=5.7'
+      DATABASE_URL: 'mysql://novosga:MySQL_App_P4ssW0rd@mysqldb:3306/novosga2?charset=utf8mb4&serverVersion=5.7.40'
       # default admin user
       NOVOSGA_ADMIN_USERNAME: 'admin'
       NOVOSGA_ADMIN_PASSWORD: '$suasenha'
@@ -96,16 +96,16 @@ services:
       NOVOSGA_PRIORITY_NAME: 'Prioridade'
       NOVOSGA_PRIORITY_DESCRIPTION: 'Atendimento prioritário'
       # default place
-      NOVOSGA_PLACE_NAME: 'Guichê'
+      NOVOSGA_PLACE_NAME: 'Mesa'
       # Set TimeZone and locale
       TZ: 'America/Cuiaba'
-      LANGUAGE: 'pt_BR'
+      APP_LANGUAGE: 'pt_BR'
       # Endereço Mercure para publicar mensagem (onde "mercure" é o nome do host)
       # esse endereço será chamado internamente via o PHP
-      MERCURE_PUBLIC_URL: http://mercure:3000/.well-known/mercure
+      MERCURE_URL: http://mercure:3000/.well-known/mercure
       # Endereço Mercure para consumir mensagem
       # esse endereço será chamado via o navegador web
-      MERCURE_CONSUMER_URL: http://127.0.0.1:3000/.well-known/mercure
+      MERCURE_PUBLIC_URL: http://127.0.0.1:3000/.well-known/mercure
   mercure:
     image: novosga/mercure:v0.11
     restart: always
