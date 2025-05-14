@@ -71,7 +71,7 @@ version: '2'
 
 services:
   novosga:
-    image: novosga/novosga:2.2.5
+    image: novosga/novosga:2.2.6
     restart: always
     depends_on:
       - mysqldb
@@ -147,4 +147,12 @@ GRANT ALL ON novosga2.* TO 'novosga'@'%' IDENTIFIED BY 'MySQL_App_P4ssW0rd';
 quit
 ```
 
-Por fim podemo acessar o site do NovoSGA e fazer as configurações de perfis
+Após realizar o comando acima entrar dentro do container da versão do novoSGA, para verificar o nome do container utilizar o comando ```docker ps``` após verificar o nome da imagem do novoSGA no docker, realizar os seguintes comandos:
+```bash
+docker exec -it SUBSTITUIR_NOME_IMAGEM /bin/sh
+#bin/console doctrine:database:create #Caso não tenha database criada, mas se rodar o script acima ela já vai estar criada
+bin/console doctrine:migration:migrate # esse comando temos que confirmar com um yes
+bin/console novosga:install
+```
+
+Por fim podemos acessar o site do NovoSGA e fazer as configurações de perfis.
